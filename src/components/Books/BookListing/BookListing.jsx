@@ -1,11 +1,14 @@
 import "./BookListing.css"
 
-function BookListing({id, title, author, image, genre, setClickedBook}) {
+function BookListing({id, title, author, image, genre, setClickedBookId}) {
     
     function bookClick() {
-        setClickedBook(id)
+        // Take the id of this specific book, and set it into the 
+        // clickedBookId state of the Book component 
+        setClickedBookId(id)
     }
 
+    // We run the bookClick function when a book is clicked
     return (
         <div className="bookListing" onClick={bookClick}>
             <h3>{title}</h3>
